@@ -1,0 +1,39 @@
+info:
+  version: 1.0.0
+  title: GCP Product
+  name: gcp-product
+gateways:
+  - datapower-api-gateway
+plans:
+  default-plan:
+    rate-limits:
+      default:
+        value: 100/1hour
+    title: Default Plan
+    description: Default Plan
+    approval: false
+  gold-plan:
+    x-billing:
+      monthly-amount: 10
+      one-time-fee: 500
+      currancy: SEK
+    rate-limits:
+      default:
+        value: 500/1second
+    title: Gold Plan
+    approval: false
+apis:
+  hello-world1.0.0:
+    name: 'hello-world:1.0.0'
+visibility:
+  view:
+    type: public
+    orgs: []
+    tags: []
+    enabled: true
+  subscribe:
+    type: authenticated
+    orgs: []
+    tags: []
+    enabled: true
+product: 1.0.0
