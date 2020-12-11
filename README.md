@@ -44,7 +44,7 @@ The script will create a `charges.yaml` file with the following schema:
 ```yaml
 consumer-org-name: 
   app: string
-  product-ame: string
+  product-name: string
   plan: string
   status: string
   billing:
